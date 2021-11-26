@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/linkdin-clone/static/css/main.e1173ace.chunk.css",
+    "main.js": "/linkdin-clone/static/js/main.000ad25a.chunk.js",
+    "main.js.map": "/linkdin-clone/static/js/main.000ad25a.chunk.js.map",
+    "runtime-main.js": "/linkdin-clone/static/js/runtime-main.129ca34d.js",
+    "runtime-main.js.map": "/linkdin-clone/static/js/runtime-main.129ca34d.js.map",
+    "static/js/2.282f75af.chunk.js": "/linkdin-clone/static/js/2.282f75af.chunk.js",
+    "static/js/2.282f75af.chunk.js.map": "/linkdin-clone/static/js/2.282f75af.chunk.js.map",
+    "index.html": "/linkdin-clone/index.html",
+    "static/css/main.e1173ace.chunk.css.map": "/linkdin-clone/static/css/main.e1173ace.chunk.css.map",
+    "static/js/2.282f75af.chunk.js.LICENSE.txt": "/linkdin-clone/static/js/2.282f75af.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.129ca34d.js",
+    "static/js/2.282f75af.chunk.js",
+    "static/css/main.e1173ace.chunk.css",
+    "static/js/main.000ad25a.chunk.js"
+  ]
+}
