@@ -18,7 +18,54 @@ const Header = (props)=> {
                     </SearchIcon>
                 </Search>
                 <Nav>
-                    Nav Menu
+                    <NavListWrap>
+                        <NavList className='active'>
+                            <a>
+                                <img src='/images/nav-home.svg' />
+                                <span>Home</span>
+                            </a>
+                            </NavList>
+                            <NavList>
+                            <a>
+                                <img src='/images/nav-jobs.svg' />
+                                <span>Jobs</span>
+                            </a>
+                            </NavList>
+                            <NavList>
+                            <a>
+                                <img src='/images/nav-messaging.svg' />
+                                <span>Messaging</span>
+                            </a>
+                            </NavList>
+                            <NavList>
+                            <a>
+                                <img src='/images/nav-network.svg' />
+                                <span>Network</span>
+                            </a>
+                            </NavList>
+                            <NavList>
+                            <a>
+                                <img src='/images/nav-notifications.svg' />
+                                <span>Notifications</span>
+                            </a>
+                            </NavList>
+                            <User>
+                                <a>
+                                    <img  src='/images/user.svg'/>
+                                    <span>Me</span>
+                                    <img className='svg' src="/images/down-icon.svg" />
+                                </a>
+                            </User>
+                            <Work>
+                                <a>
+                                    <img src='/images/nav-work.svg' />
+                                    <span>
+                                        Work
+                                        <img src='/images/down-icon.svg' />
+                                    </span>
+                                </a>
+                            </Work>
+                    </NavListWrap>
                 </Nav>
             </Content>
         </Container>
@@ -36,6 +83,7 @@ const Container = styled.div`
     top : 0;
     width: 100vw;
     z-index: 100;
+    height: 62px;
     overflow-x: hidden;
 
 `;
@@ -46,13 +94,14 @@ const Content = styled.div`
     margin: 0 auto;
     min-height: 100%;
     max-width: 1128px;
-    padding: 5px 0;
+
 
 `;
 
 const Logo = styled.div`
     margin-right: 8px;
     font-size: 0px;
+    
 `;
 
 const Search = styled.div`
@@ -97,13 +146,96 @@ const SearchIcon = styled.div`
 const Nav = styled.nav`
     margin-left: auto;
     display: block;
+    margin-right: 10px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1160px) {
         position: fixed;
         left: 0;
         bottom: 0;
         background: white;
         width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+`;
+
+const NavListWrap = styled.ul`
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+
+    .active {
+        border-bottom: 2px solid black;
+    }
+`;
+
+const NavList = styled.li`
+    display: flex;
+    align-items: center;
+
+    a {
+        align-items: center;
+        background : transparent;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        font-weight: 400;
+        justify-content: center;
+        line-height: 1.5;
+        min-height: 52px;
+        min-width: 80px;
+        position: relative;
+        text-decoration : none;
+
+        span{
+            color: rgba(0,0,0,0.6);
+            align-items: center;
+            display: flex;
+        }
+
+
+        @media (max-width: 768px) {
+            width: 15vw;
+            min-width: 63px;
+        }
+
+
+    }
+
+    &:hover, &:active {
+        a {
+            span {
+                color: rgba(0,0,0,0.9);
+            }
+        }
+
+    }
+
+
+`;
+
+const User = styled(NavList)`
+
+        a > img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            preserveAspect
+        }
+        a > .svg{
+            display: block;
+            vertical-align: center;
+            line-height: 0;
+        }
+`;
+
+const Work = styled(User)`
+    a {
+        span{
+            img {
+                padding-left: 3px;
+            }
+        }
     }
 `;
 
